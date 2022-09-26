@@ -38,8 +38,9 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
     
 repo_url: https://github.com/redhalo/homelab-dashboard
+epo_name: redhalo/homelab-dashboard
 
-site_name: RJ's Home Lab
+site_name: Homelab Dashboard
 
 nav:
   - Home Lab: 
