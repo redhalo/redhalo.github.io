@@ -1,19 +1,26 @@
-#extra_css:
-#  - stylesheets/md3.css
+## Site settings
+site_name: Home Lab
+site_url: https://www.robert-mccoy.com
+site_author: Robert McCoy
+site_description: Personal home lab for media streaming and other things.
 
+## Repo settings
+repo_name: redhalo/redhalo.github.io
+repo_url: https://github.com/redhalo/redhalo.github.io
+edit_uri: ""
+
+## Theme settings
 theme:
   name: material
+  custom_dir: docs/overrides
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+    scheme: gruvbox
+    primary: green
+    accent: green
+  #favicon: assets/images/favicon.png
+  #icon:
+  #  logo: assets/images/favicon.svg
+  #logo: assets/images/favicon.svg
 
   features:
     - navigation.instant
@@ -27,21 +34,88 @@ theme:
     - search.suggest
     - search.highlight
     
+## Extra data
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/aasmpro
+      
+  ## Version
+  #  version:
+  #    name: v1.0.4
+  #    link: https://github.com/aasmpro/gruvdoc/releases/tag/v1.0.4
+
+  ## License
+  #  license:
+  #    name: MIT
+  #    link: https://github.com/aasmpro/gruvdoc/blob/master/LICENSE
+
+  ## Made with
+  made_with: true
+
+## Navigation
+use_directory_urls: true
+
+# nav:
+#   - Home: index.md
+
+## Copyright
+copyright: Robert McCoy
+
+## Extra js files
+extra_javascript:
+  - assets/javascripts/tablesort.js
+  
+## Extra css files
+extra_css:
+#  - assets/stylesheets/fonts.css
+  - assets/stylesheets/vars.css
+  - assets/stylesheets/scheme.css
+  - assets/stylesheets/primary.css
+  - assets/stylesheets/accent.css
+  - assets/stylesheets/admonitions.css
+  - assets/stylesheets/fixes.css
+  - assets/stylesheets/styles.css
+
+# Extension settings
 markdown_extensions:
+  - abbr
+  - admonition
   - attr_list
   - def_list
-  - md_in_html
-  - pymdownx.tasklist:
-      custom_checkbox: true
+  - footnotes
+  - pymdownx.critic
+  - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-    
-repo_url: https://github.com/redhalo/homelab-dashboard
-repo_name: redhalo/redhalo.github.io
-
-site_name: Homelab Dashboard
-
-nav:
-  - Home Lab: 
-    - index.md
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.caret
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.snippets
+  - pymdownx.tabbed
+  - pymdownx.tilde
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - meta
+  - toc:
+      permalink: "#"
+      
+## Plugin settings
+plugins:
+  - search
+  - macros
+  - minify:
+      minify_html: true
+      minify_js: true
+      htmlmin_opts:
+        remove_comments: true
