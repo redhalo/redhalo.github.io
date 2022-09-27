@@ -111,11 +111,11 @@ markdown_extensions:
       permalink: "#"
       
 ## Plugin settings
-plugins:
-  - search
-  #- macros
-  - minify:
-      minify_html: true
-      minify_js: true
-      htmlmin_opts:
-        remove_comments: true
+#plugins:
+#  - search
+#  - macros
+#  - minify:
+#      minify_html: true
+#      minify_js: true
+#      htmlmin_opts:
+#        remove_comments: true
